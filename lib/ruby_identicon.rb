@@ -97,7 +97,7 @@ module RubyIdenticon
     options = DEFAULT_OPTIONS.merge(options)
 
     raise 'title cannot be nil' if title == nil
-    raise 'key is nil or less than 16 bytes' if options[:key] == nil || options[:key].length < 16
+    raise 'key is nil or less than 16 bytes' if options[:key] == nil || options[:key].length < 5
     raise 'grid_size must be between 4 and 9' if options[:grid_size] < 4 || options[:grid_size] > 9
     raise 'invalid border size' if options[:border_size] < 0
     raise 'invalid square size' if options[:square_size] < 0
